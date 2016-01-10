@@ -10,6 +10,7 @@ gulp.task('clean', () => { clean(); });
 
 gulp.task('serve:dev', () => { server.serveDev(); });
 gulp.task('serve:watch', () => { server.serveWatch(); });
+gulp.task('serve:dist', () => { server.serveDist(); });
 
 gulp.task('serve', (done) => {
   run(['serve:dev', 'serve:watch'], done);
@@ -22,4 +23,8 @@ gulp.task('html:dist', () => { html.dist(); });
 
 gulp.task('build', (done) => {
   run('clean', ['js:dist', 'js:systemjs', 'html:dist'], done);
+});
+
+gulp.task('dist', (done) => {
+  run('build', 'serve:dist', done);
 });

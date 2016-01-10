@@ -14,3 +14,11 @@ export function serveDev() {
 export function serveWatch() {
   watcher({ port: config.ports.watch, path: config.paths.src.base });
 }
+
+export function serveDist() {
+  const app = express();
+  app.use(express.static(config.paths.dist.base));
+  app.listen(config.ports.dist, () => {
+    console.log('express listening on %s', config.ports.dist);
+  });
+}

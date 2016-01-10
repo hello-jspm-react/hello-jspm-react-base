@@ -4,7 +4,8 @@ const config = {};
 
 config.ports = {
   dev: 3000,
-  watch: 9111
+  watch: 9111,
+  dist: 8080
 };
 
 config.paths = {
