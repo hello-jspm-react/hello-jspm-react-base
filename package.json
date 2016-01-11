@@ -23,6 +23,7 @@
     "path": "^0.12.7"
   },
   "jspm": {
+    "configFile": "system.config.js",
     "dependencies": {
       "capaj/systemjs-hot-reloader": "github:capaj/systemjs-hot-reloader@^0.5.1",
       "react": "npm:react@^0.14.6",
