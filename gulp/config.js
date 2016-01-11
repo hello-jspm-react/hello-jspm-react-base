@@ -21,7 +21,8 @@ config.paths.src.libs = 'react + react-dom';
 config.paths.src.libsRev = 'react - react-dom';
 
 config.paths.dist.base = 'dist';
-config.paths.dist.js = path.join(config.paths.dist.base, 'js');
+config.paths.dist.public = path.join(config.paths.dist.base, 'public');
+config.paths.dist.js = path.join(config.paths.dist.public, 'js');
 config.paths.dist.app = 'app.js';
 config.paths.dist.lib = 'lib.js';
 

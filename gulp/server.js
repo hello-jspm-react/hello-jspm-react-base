@@ -17,7 +17,7 @@ export function serveWatch() {
 
 export function serveDist() {
   const app = express();
-  app.use(express.static(config.paths.dist.base));
+  app.use(express.static(config.paths.dist.public));
   app.listen(config.ports.dist, () => {
     console.log('express listening on %s', config.ports.dist);
   });
