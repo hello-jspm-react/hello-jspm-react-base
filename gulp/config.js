@@ -27,7 +27,12 @@ config.paths.dist.app = 'app.js';
 config.paths.dist.lib = 'lib.js';
 
 config.htmlReplace = {
-  js: ['/js/system.js', '/js/config.js', '/js/lib.js', '/js/app.js'],
+  js: [
+    '/js/system.js',
+    '/js/config.js',
+    `/js/${config.paths.dist.lib}`,
+    `/js/${config.paths.dist.app}`
+  ],
   entry_point: `<script>System.import("${config.paths.src.main}");</script>`
 };
 
